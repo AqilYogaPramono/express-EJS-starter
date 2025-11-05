@@ -11,9 +11,6 @@ const indexRouter = require('./routes/index')
 
 const authRouter = require('./routes/auth')
 
-const userDashboardRouter = require('./routes/users/dashboard')
-const adminDashboardRouter = require('./routes/admins/dashboard')
-
 const app = express()
 
 // view engine setup
@@ -42,9 +39,6 @@ app.use(flash())
 app.use('/', indexRouter)
 
 app.use('/', authRouter)
-
-app.use('/user/dashboard', userDashboardRouter)
-app.use('/admin/dashboard', adminDashboardRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
